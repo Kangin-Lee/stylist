@@ -12,6 +12,7 @@ import Washing from './component/Washing';
 import Survey from './component/Survey';
 import {Routes, Route} from "react-router-dom";
 import { useState, useEffect } from 'react';
+import Footer from "./component/Footer";
 
 function App() {
   const [weather, setWeather] = useState(null);
@@ -39,18 +40,19 @@ function App() {
 
   return (
     <div>
-      <Navbar weather={weather}/>
+      <Navbar weather={weather} />
       <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/login' element={<Login />}/>
-        <Route path='/ootd' element={<Ootd />}/>
-        <Route path='/tpo' element={<Tpo />}/>
-        <Route path='/outfit' element={<Outfit />}/>
-        <Route path='/weather' element={<Weather />}/>
-        <Route path='/colormatch' element={<Colormatch />}/>
-        <Route path='/washing' element={<Washing />}/>
-        <Route path='/survey' element={<Survey />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/ootd" element={<Ootd />} />
+        <Route path="/tpo" element={<Tpo />} />
+        <Route path="/outfit" element={<Outfit />} />
+        <Route path="/weather" element={<Weather />} />
+        <Route path="/colormatch" element={<Colormatch />} />
+        <Route path="/washing" element={<Washing />} />
+        <Route path="/survey" element={<Survey />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

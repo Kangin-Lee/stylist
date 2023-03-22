@@ -79,6 +79,8 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
+  
 }
 
 /* menu------------------------------------------------------------------ */
@@ -227,11 +229,101 @@ body{
 }
 
 /* video.js========================================================= */
+.video-content{
+  margin-bottom: 30px;
+}
 .video-head{
-  margin-top: 30px;
+  margin: 30px 0 5px 0;
 }
 .video-text{
   margin-left: 5px;
   font-size: 2em;
+  font-weight: bold;
+}
+
+/* 트렌드================================================================= */
+.trend{
+  width: 100%;
+  height: 1000px;
+  background-color: rgba(240, 238, 238, 0.507);
+}
+
+.trend-title{
+  font-size: 2em;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+
+
+
+
+/* footer-------------------------------------------------------- */
+.footer{
+  background-color: #343541;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-menu{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-menu li{
+  list-style: none;
+  font-size: 17px;
+  margin-top: 50px;
+  color: lightgray;
+}
+
+.footer-content{
+  padding: 50px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: lightgray;
+}
+
+.footer-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text h1{
+  font-family: 'Caveat', cursive;
+}
+
+.footer-text p{
+  margin: 3px;
+}
+
+.footer-icons{
+  margin: 15px 0;
+}
+
+.footer-icons span{
+  font-size: 1.5em;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.footer-btns{
+  margin: 0 30px 30px 0;
+  border-radius: 20px;
+  padding: 5px 15px;
+  border: 3px solid rgb(99, 97, 97);
+}
+
+.footer-btns:hover{
+  transition: 0.5s;
+  background-color: lightgray;
+}
+
+.copyright{
   font-weight: bold;
 }

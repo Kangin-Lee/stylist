@@ -1,0 +1,237 @@
+/* 헤더부분//////////////////////////// */
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Caveat:wght@700&family=Nanum+Myeongjo:wght@700&family=Noto+Sans+KR:wght@400&display=swap');
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.stylist{
+  font-family: 'Caveat', cursive;
+  font-size: 1.2em;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 20px 0;
+}
+
+.logo{
+  font-size: 3em;
+  font-family: 'Caveat', cursive;
+  text-decoration: none;
+  color: black;
+}
+
+.logo-text{
+  text-decoration: none;
+  color: black;
+}
+
+.logo-text:hover{
+  color: black;
+}
+
+.header-right{
+  display: flex;
+  align-items: center;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border: none;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.login img{
+  width: 35px;
+}
+.login-text{
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.search-bar input{
+  width: 100%;
+  outline: none;
+}
+
+.search-bar{
+  width: 280px;
+  border: none;
+  background-color: #E7E6E6;
+  margin-right: 20px;
+  border-radius: 20px;
+  padding: 5px 5px 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-bar button, .search-bar input{
+  border: none;
+  background-color: #E7E6E6;
+}
+.weather{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* menu------------------------------------------------------------------ */
+.bar{
+  width: 65px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: black;
+  position: absolute;
+  top:190px;
+
+}
+.menu{
+  display: flex;
+  justify-content:space-between;
+  padding: 0;
+  margin: 55px 0 30px 0;
+}
+
+.menu li{
+  list-style: none;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.menu-detail{
+  text-decoration: none;
+  color: black;
+}
+
+.menu-detail:hover{
+  color: rgba(0, 0, 0, 0.747);
+}
+
+/* home------------------------------------------------------------------------------------ */
+.d-block{
+  width: 100%;
+  height: 500px;
+}
+.w-1{
+  background-image: url(https://www.waterfront.co.za/wp-content/uploads/2022/09/2-1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.w-1::before{
+  content: '';
+  background: linear-gradient(to right, black, transparent);
+  position: absolute;
+  left: 0;
+  height: 500px;
+  width: 80%;
+}
+.w-3{
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://cdn-images.zety.com/pages/fashion_resume_example_3.jpg);
+}
+
+.w-2{
+  width: 100%;
+  background-image: url(https://www.visitwestside.com/wp-content/themes/chimera-framework/chimera/timthumb.php?src=https://www.visitwestside.com/wp-content/uploads/2020/03/Paint-party-palette.jpg&w=1920&h=500&zc=1&a=c&q=60);
+  background-size: cover;
+  background-position: center;
+}
+
+.logo-home{
+  font-family: 'Caveat', cursive;
+}
+.w-1-text h3{
+  font-size: 3em;
+  text-align: start;
+  font-weight: bold;
+  color: white;
+}
+
+.w-1-text p{
+  text-align: start;
+  color: white;
+  line-height: 28px;
+  font-size: 1.2em;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.w-2-text h3{
+  font-size: 3em;
+  text-align: start;
+  font-weight: bold;
+  color: black;
+}
+
+.w-2-text p{
+  text-align: start;
+  color: black;
+  line-height: 28px;
+  font-size: 1.2em;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.w-2-go{
+  border: 2px solid black;
+  padding: 5px 13px;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.w-2-text{
+  margin-bottom: 50px;
+}
+
+.w-2-text div{
+  display: flex;
+}
+
+.w-3-text{
+  margin-bottom: 80px;
+}
+.w-3-text h3{
+  font-size: 3em;
+  text-align: start;
+  font-weight: bold;
+  color: white;
+}
+
+.w-3-text p{
+  text-align: start;
+  color: white;
+  line-height: 28px;
+  font-size: 1.2em;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.w-3-text div{
+  display: flex;
+}
+
+.w-3-go{
+  border: 2px solid white;
+  padding: 5px 13px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* video.js========================================================= */
+.video-head{
+  margin-top: 30px;
+}
+.video-text{
+  margin-left: 5px;
+  font-size: 2em;
+  font-weight: bold;
+}

@@ -24,10 +24,10 @@ const Video = () => {
       },
     };
     return (
-      <Container>
-        <div className="video-head">
+      <Container className="video-head">
+        <div>
           <span className="logo">Stylist</span>
-          <span className="video-text">가 PICK한 영상</span>
+          <span className="video-text">가 추천하는 영상</span>
         </div>
         <Carousel responsive={responsive} className="video-content">
           <div>

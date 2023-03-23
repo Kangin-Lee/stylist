@@ -84,15 +84,7 @@ body{
 }
 
 /* menu------------------------------------------------------------------ */
-.bar{
-  width: 65px;
-  height: 5px;
-  border-radius: 5px;
-  background-color: black;
-  position: absolute;
-  top:190px;
 
-}
 .menu{
   display: flex;
   justify-content:space-between;
@@ -114,6 +106,8 @@ body{
 .menu-detail:hover{
   color: rgba(0, 0, 0, 0.747);
 }
+
+
 
 /* home------------------------------------------------------------------------------------ */
 .d-block{
@@ -228,12 +222,12 @@ body{
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+
+
 /* video.js========================================================= */
-.video-content{
-  margin-bottom: 30px;
-}
+
 .video-head{
-  margin: 30px 0 5px 0;
+  margin: 30px 0 80px 0;
 }
 .video-text{
   margin-left: 5px;
@@ -243,21 +237,123 @@ body{
 
 /* 트렌드================================================================= */
 .trend{
-  width: 100%;
-  height: 1000px;
+
   background-color: rgba(240, 238, 238, 0.507);
 }
 
+.trend-text{
+  padding-top: 30px;
+}
 .trend-title{
   font-size: 2em;
   font-weight: bold;
+  
+}
+.trend-hot{
+  font-size: 2em;
+  font-weight: bold;
   padding-top: 30px;
+  color: #E10D25;
+  margin: 0 14px;
+}
+.trend-second-text{
+  margin-top: 10px;
+  font-weight: bold;
+}
+.trend-img{
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.trend-card-1{
+  display: flex;
+  justify-content: end;
+  padding: 20px 0;
+}
+
+.trend-card-text{
+  padding: 0 30px;
+  text-align: end;
+  width: 100%;
+  border-right: 5px solid rgba(0, 0, 0, 0.301);
+  margin: 0 30px;
+}
+
+.trend-card-2{
+  display: flex;
+  padding: 20px 0;
+}
+
+.trend-card-2:last-child{
+  padding: 20px 0 70px 0;
+}
+
+.trend-card-text-2{
+  padding: 0 30px;
+  width: 100%;
+  border-left: 5px solid rgba(0, 0, 0, 0.301);
+  margin: 0 30px;
+}
+
+.trend-card-text h3, .trend-card-text-2 h3{
+  font-weight: bold;
 }
 
 
+/* 쇼핑몰 사이트==================================================== */
+.shopping-text{
+  font-size: 2em;
+  font-weight: bold;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
 
+.brand-content{
+  margin: 15px 0 30px 0;
+}
 
+.brand, .brand-white, .brand-gray{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 3px solid black;
+  border-radius: 100%;
+  transition: 0.7s;
+}
 
+.brand:hover{
+  background-color: black;
+  transition: 0.7s;
+}
+
+.brand-white:hover{
+  border: 3px solid white;
+  transition: 0.7s;
+}
+
+.brand-gray:hover{
+  background-color: #f5f5f5;
+  border: 3px solid #f5f5f5;
+  transition: 0.7s;
+}
+
+.brand-pink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #e6409d;
+  border-radius: 100%;
+  transition: 0.7s;
+}
+
+.brand-pink:hover{
+  background-color: #e6409d;
+}
 /* footer-------------------------------------------------------- */
 .footer{
   background-color: #343541;

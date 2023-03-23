@@ -259,6 +259,10 @@ body{
 .trend-second-text{
   margin-top: 10px;
   font-weight: bold;
+  width: 570px;
+  padding: 10px 20px; 
+  border-radius: 20px;
+  background-color: #cfcece;
 }
 .trend-img{
   border-radius: 15px;
@@ -280,6 +284,17 @@ body{
   margin: 0 30px;
 }
 
+.cargo{
+  color: #808000;
+}
+
+.Denim{
+  color: #2b8dbf;
+}
+
+.magenta{
+  color: #BB2649;
+}
 .trend-card-2{
   display: flex;
   padding: 20px 0;
@@ -298,9 +313,16 @@ body{
 
 .trend-card-text h3, .trend-card-text-2 h3{
   font-weight: bold;
+  margin-bottom: 1em;
 }
 
+.trend-card-text-2 p, .trend-card-text p{
+  font-weight: 550;
+}
 
+.quote-left{
+  font-size: 1.3em;
+}
 /* 쇼핑몰 사이트==================================================== */
 .shopping-text{
   font-size: 2em;

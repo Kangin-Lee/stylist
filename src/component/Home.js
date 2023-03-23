@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight, faFire } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleRight,
+  faFire,
+  faQuoteLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import Video from "./Video";
 import { Container, Card } from "react-bootstrap";
@@ -89,17 +93,20 @@ const Home = () => {
             </span>
             <span className="trend-title">Trend</span>
           </div>
-          <p className="trend-second-text">
+          <div className="trend-second-text">
+            <div className="quote-left">
+              <FontAwesomeIcon icon={faQuoteLeft} />
+            </div>
             2023년 S/S 시즌을 4가지 키워드로 정리해 보았습니다.
             <br /> 이번 2023 S/S 런웨이 패션은 특히 'Y2K' 패션의 강세가
             지속되었습니다.
             <br />
             그럼 2023 S/S 패션 트렌드에 대해 알아볼까요?
-          </p>
+          </div>
 
           <div className="trend-card-1">
             <div className="trend-card-text">
-              <h3>카고 (Cargo)</h3>
+              <h3 className="cargo">카고 (Cargo)</h3>
               <p>
                 지난해에 이어 올해도 카고팬츠의 인기는 이어질 것으로 보입니다.
               </p>
@@ -135,7 +142,7 @@ const Home = () => {
               src="https://static.luck-d.com/community/202302262245/6mwho6a7j1twqfyy.jpg"
             />
             <div className="trend-card-text-2">
-              <h3>데님(Denim)</h3>
+              <h3 className="Denim">데님(Denim)</h3>
               <p>Y2K하면 빠질 수 없는 것이 데님이죠.</p>
               <p>
                 데님은 자신의 개성을 잘 표현할 수 있는 소재로 청춘, 자유로움의
@@ -187,7 +194,7 @@ const Home = () => {
               src="https://img.vogue.co.kr/vogue/2022/12/style_63a9c54eea385-620x930.jpg"
             />
             <div className="trend-card-text-2">
-              <h3>비바 마젠타(Viva Magenta)</h3>
+              <h3 className="magenta">비바 마젠타(Viva Magenta)</h3>
               <p>
                 미국 색채 연구소 PANTONE은 올해의 컬러로 레드 계열의 ‘비바
                 마젠타’를 선정했습니다.

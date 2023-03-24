@@ -101,13 +101,15 @@ body{
 .menu-detail{
   text-decoration: none;
   color: black;
+  padding-bottom: 5px;
 }
 
 .menu-detail:hover{
-  color: rgba(0, 0, 0, 0.747);
+  border-bottom: 3px solid black;
+  color: black;
+  border-radius: 2px;
+  transition: 0.13s;
 }
-
-
 
 /* home------------------------------------------------------------------------------------ */
 .d-block{
@@ -227,12 +229,16 @@ body{
 /* video.js========================================================= */
 
 .video-head{
-  margin: 30px 0 80px 0;
+  margin: 30px 0 70px 0;
 }
 .video-text{
   margin-left: 5px;
   font-size: 2em;
   font-weight: bold;
+}
+
+.video-content iframe{
+  border-radius: 15px;
 }
 
 /* 트렌드================================================================= */
@@ -289,12 +295,14 @@ body{
 }
 
 .Denim{
-  color: #2b8dbf;
+  color: #1b77a5;
 }
 
 .magenta{
   color: #BB2649;
 }
+
+
 .trend-card-2{
   display: flex;
   padding: 20px 0;
@@ -375,6 +383,18 @@ body{
 
 .brand-pink:hover{
   background-color: #e6409d;
+}
+
+.shopping-logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopping-logo p{
+  margin-top: 10px;
+  font-weight: bold;
 }
 /* footer-------------------------------------------------------- */
 .footer{

@@ -111,7 +111,7 @@ const Home = () => {
                 지난해에 이어 올해도 카고팬츠의 인기는 이어질 것으로 보입니다.
               </p>
               <p>
-                포켓이 많은 유틸리티 감성을 살린 카고팬츠가 뉴욕, 밀라노에 이어{" "}
+                포켓이 많은 유틸리티 감성을 살린 카고팬츠가 뉴욕, 밀라노에 이어
               </p>
               <p>
                 2023 S/S 파리 패션위크에서도 두드러지게 보여 올해도 Y2K의 강세가
@@ -131,7 +131,7 @@ const Home = () => {
             <img
               className="trend-img"
               width={300}
-              src="https://img.vogue.co.kr/vogue/2023/02/style_63db8102f2f77-620x930.png"
+              src="/images/trend/cargo.png"
             />
           </div>
 
@@ -139,7 +139,7 @@ const Home = () => {
             <img
               className="trend-img"
               width={300}
-              src="https://static.luck-d.com/community/202302262245/6mwho6a7j1twqfyy.jpg"
+              src="/images/trend/denim.jpg"
             />
             <div className="trend-card-text-2">
               <h3 className="Denim">데님(Denim)</h3>
@@ -183,7 +183,7 @@ const Home = () => {
             <img
               className="trend-img"
               width={300}
-              src="https://img.wkorea.com/w/2023/01/style_6408231884363-524x700.jpg"
+              src="/images/trend/leather.jpg"
             />
           </div>
 
@@ -191,7 +191,7 @@ const Home = () => {
             <img
               className="trend-img"
               width={300}
-              src="https://img.vogue.co.kr/vogue/2022/12/style_63a9c54eea385-620x930.jpg"
+              src="/images/trend/magenta.jpg"
             />
             <div className="trend-card-text-2">
               <h3 className="magenta">비바 마젠타(Viva Magenta)</h3>

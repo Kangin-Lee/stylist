@@ -105,9 +105,9 @@ body{
 }
 
 .menu-detail:hover{
-  border-bottom: 3px solid black;
+  border-bottom: 4px solid black;
   color: black;
-  border-radius: 2px;
+  border-radius: 3px;
   transition: 0.13s;
 }
 
@@ -396,6 +396,120 @@ body{
   margin-top: 10px;
   font-weight: bold;
 }
+
+/* colormatch================================================= */
+.colormatch{
+  background-color:rgba(240, 238, 238, 0.507);
+}
+.colormatch-text h3{
+  font-weight: bold;
+  font-size: 2em;
+  padding-top: 30px;
+  
+}
+
+.colormatch-text p:nth-child(1){
+  font-weight: bold;
+}
+
+.colormatch-text p:last-child{
+  color: rgb(92, 91, 91);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.palette{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 30px;
+}
+
+.palette-color{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.palette-color h6{
+  font-weight: bold;
+}
+
+.BLACK, .WHITE,.GRAY,.NAVY, .KAKI,.BEIGE,.BROWN,.BLUE,.GREEN,.BURGUNDY{
+  width: 90px;
+  height: 90px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.BLACK:hover, .WHITE:hover, .GRAY:hover, .NAVY:hover, .KAKI:hover, .BEIGE:hover, .BROWN:hover, .BLUE:hover, .GREEN:hover, .BURGUNDY:hover{
+  box-shadow: none;
+  transition: 0.5s;
+}
+
+.BLACK{
+  background-color: black;
+}
+.WHITE{
+  background-color: white;
+}
+.GRAY{
+  background-color: gray;
+}
+
+.NAVY{
+  background-color: #243b5b;
+}
+
+.KAKI{
+  background-color: #6d6a0a;
+}
+
+.BEIGE{
+  background-color: #f3cf98;
+}
+
+.BROWN{
+  background-color: #483420;
+}
+
+.BLUE{
+  background-color: #274fb7;
+}
+
+.GREEN{
+  background-color: #228B22;
+}
+
+.BURGUNDY{
+  background-color: #5e0a0a;
+}
+
+.userSelect-color{
+  display: flex;
+  padding: 5px 0 25px 0;
+}
+.userSelect-color-text{
+  width: 60%;
+  margin-left: 30px;
+}
+.userSelect-color-text h6{
+  font-weight: bold;
+}
+
+.userSelect-color-detailText{
+  background-color: #cfcece;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 /* footer-------------------------------------------------------- */
 .footer{
   background-color: #343541;
@@ -450,16 +564,21 @@ body{
   cursor: pointer;
 }
 
+.footer-div{
+  display: flex;
+}
+
 .footer-btns{
   margin: 0 30px 30px 0;
   border-radius: 20px;
   padding: 5px 15px;
   border: 3px solid rgb(99, 97, 97);
+  
 }
 
 .footer-btns:hover{
   transition: 0.5s;
-  background-color: lightgray;
+  background-color: rgba(211, 211, 211, 0.404);
 }
 
 .copyright{

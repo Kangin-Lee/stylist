@@ -10,7 +10,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
-  const btns = ["HOME", "Color Match", "Weather", "OutFit"];
+  const btns = [
+    "이용약관",
+    "개인정보처리방침",
+    "책임의 한계와 법적고지",
+    "회원정보 고객선터",
+  ];
   return (
     <div className="footer">
       <Container className="footer-content">
@@ -44,9 +49,9 @@ const Footer = () => {
           </span>
         </div>
 
-        <div>
+        <div className="footer-div">
           {btns.map((menu) => (
-            <button className="footer-btns">{menu}</button>
+            <div className="footer-btns">{menu}</div>
           ))}
         </div>
 

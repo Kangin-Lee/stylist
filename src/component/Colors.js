@@ -3,7 +3,14 @@ import React, { useState } from "react";
 const Colors = ({ userSelect }) => {
   let combinationColor = userSelect && userSelect.combination;
   let combinationImg = userSelect && userSelect.img;
-
+  const recommendStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    textTransform: "uppercase",
+    fontWeight: "bold",
+    marginBottom: "15px",
+  };
   return (
     <div>
       <div className="userSelect-color">
@@ -23,7 +30,7 @@ const Colors = ({ userSelect }) => {
             combinationColor.map((color) => (
               <div className="recommend-img">
                 <div className={color}></div>
-                {console.log({ combinationColor })}
+                <div style={recommendStyle}>{color}</div>
                 <img
                   className="recommend-imgs"
                   width={200}

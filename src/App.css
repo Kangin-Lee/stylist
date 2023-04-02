@@ -566,8 +566,9 @@ body{
   display: flex;
   padding: 5px 0 25px 0;
 }
+
 .userSelect-color-text{
-  width: 60%;
+  width: 80%;
   margin-left: 30px;
 }
 .userSelect-color-text h6{
@@ -588,6 +589,7 @@ body{
   padding: 20px 20px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 2s;
 }
 
 .recommend-imgs{

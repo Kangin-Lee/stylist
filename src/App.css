@@ -400,6 +400,7 @@ body{
 /* colormatch================================================= */
 .colormatch{
   background-color:rgba(240, 238, 238, 0.507);
+  padding-bottom: 30px;
 }
 .colormatch-text h3{
   font-weight: bold;
@@ -439,7 +440,7 @@ body{
   font-weight: bold;
 }
 
-.BLACK, .WHITE,.GRAY,.NAVY, .KAKI,.BEIGE,.BROWN,.BLUE,.GREEN,.BURGUNDY{
+.BLACK, .WHITE,.GRAY,.NAVY, .KHAKI,.BEIGE,.BROWN,.BLUE,.GREEN,.BURGUNDY, .CREAM{
   width: 90px;
   height: 90px;
   border-radius: 7px;
@@ -449,7 +450,7 @@ body{
   cursor: pointer;
 }
 
-.BLACK:hover, .WHITE:hover, .GRAY:hover, .NAVY:hover, .KAKI:hover, .BEIGE:hover, .BROWN:hover, .BLUE:hover, .GREEN:hover, .BURGUNDY:hover{
+.BLACK:hover, .WHITE:hover, .GRAY:hover, .NAVY:hover, .KHAKI:hover, .BEIGE:hover, .BROWN:hover, .BLUE:hover, .GREEN:hover, .BURGUNDY:hover, .CREAM:hover{
   box-shadow: none;
   transition: 0.5s;
 }
@@ -457,6 +458,71 @@ body{
 .BLACK{
   background-color: black;
 }
+
+#color{
+  width: 120px;
+  height: 120px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  
+}
+
+.black{
+  background-color: black;
+  color: white;
+}
+
+.white{
+  background-color: white;
+  color: black;
+}
+
+.gray{
+  background-color: gray;
+  color: white;
+}
+
+.navy{
+  background-color: #243b5b;
+  color: white;
+}
+
+.khaki{
+  background-color: #6d6a0a;
+  color: white;
+}
+
+.beige{
+  background-color: #f3cf98;
+  color: white;
+}
+
+.brown{
+  background-color: #483420;
+  color: white;
+}
+
+.green{
+  background-color: #228B22;
+  color: white;
+}
+
+.blue{
+  background-color: #274fb7;
+  color: white;
+}
+
+.burgundy{
+  background-color: #5e0a0a;
+  color: white;
+}
+
 .WHITE{
   background-color: white;
 }
@@ -464,11 +530,15 @@ body{
   background-color: gray;
 }
 
+.CREAM{
+  background-color: #FFFDD0;
+}
+
 .NAVY{
   background-color: #243b5b;
 }
 
-.KAKI{
+.KHAKI{
   background-color: #6d6a0a;
 }
 
@@ -504,11 +574,34 @@ body{
   font-weight: bold;
 }
 
-.userSelect-color-detailText{
-  background-color: #cfcece;
-  padding: 5px 10px;
-  border-radius: 5px;
+
+.recommend-color{
+  display: flex;
+  justify-content: space-between;
 }
+
+.recommend-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.recommend-imgs{
+  border-radius: 15px;
+  transition: 0.7s;
+}
+
+.recommend-imgs:hover {
+  transition: 0.7s;
+  transform: scale( 2 );
+  z-index: 2;
+}
+
+
 
 /* footer-------------------------------------------------------- */
 .footer{

@@ -1,27 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Colors = ({ userSelect }) => {
-  console.log(userSelect);
+  let combinationColor = userSelect && userSelect.combination;
+  let combinationImg = userSelect && userSelect.img;
+
   return (
     <div>
       <div className="userSelect-color">
-        <div className={userSelect && userSelect.name}></div>
+        <div id="color" className={userSelect && userSelect.name}>
+          {userSelect && userSelect.name}
+        </div>
         <div className="userSelect-color-text">
-          <h6>{userSelect && userSelect.name}</h6>
           <div className="userSelect-color-detailText">
-            {userSelect && userSelect.text}
+            <div>{userSelect && userSelect.text}</div>
           </div>
         </div>
       </div>
 
-      <div className="recommend-color">
-        <div className={userSelect && userSelect.combination1}></div>
-        <h6>{userSelect && userSelect.combination1}</h6>
-        <div>
-          <img width={300} src={userSelect && userSelect.combination1_img[0]} />
+      <div>
+        <div className="recommend-color">
+          {userSelect &&
+            combinationColor.map((color) => (
+              <div className="recommend-img">
+                <div className={color}></div>
+                {console.log({ combinationColor })}
+                <img
+                  className="recommend-imgs"
+                  width={200}
+                  src={
+                    combinationImg[
+                      (userSelect && combinationColor).indexOf(color)
+                    ]
+                  }
+                />
+              </div>
+            ))}
         </div>
       </div>
-      <div>흰색</div>
     </div>
   );
 };

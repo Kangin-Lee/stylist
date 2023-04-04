@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Colors = ({ userSelect }) => {
+const Colors = ({ userSelect, selectColor }) => {
   let combinationColor = userSelect && userSelect.combination;
   let combinationImg = userSelect && userSelect.img;
   const recommendStyle = {
@@ -12,7 +12,10 @@ const Colors = ({ userSelect }) => {
     marginBottom: "15px",
   };
   return (
-    <div>
+    <div
+      style={selectColor ? { display: "block" } : { display: "none" }}
+      className="recommend-color-area"
+    >
       <div className="userSelect-color">
         <div id="color" className={userSelect && userSelect.name}>
           {userSelect && userSelect.name}

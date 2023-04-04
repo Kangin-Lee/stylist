@@ -405,7 +405,11 @@ body{
 .colormatch-text h3{
   font-weight: bold;
   font-size: 2em;
-  padding-top: 30px;
+  padding-top: 30px; 
+}
+
+.recommend-color-video{
+  padding-bottom: 50px;
   
 }
 
@@ -476,51 +480,61 @@ body{
 .black{
   background-color: black;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .white{
   background-color: white;
   color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .gray{
   background-color: gray;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .navy{
   background-color: #243b5b;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .khaki{
   background-color: #6d6a0a;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .beige{
   background-color: #f3cf98;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .brown{
   background-color: #483420;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .green{
   background-color: #228B22;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .blue{
   background-color: #274fb7;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .burgundy{
   background-color: #5e0a0a;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .WHITE{
@@ -568,8 +582,8 @@ body{
 }
 
 .userSelect-color-text{
-  width: 80%;
-  margin-left: 30px;
+  width: 90%;
+  margin-left: 20px;
 }
 .userSelect-color-text h6{
   font-weight: bold;
@@ -601,6 +615,20 @@ body{
   transition: 0.7s;
   transform: scale( 2 );
   z-index: 2;
+}
+
+.recommend-color-area{
+  background-color: white;
+  padding: 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+}
+
+.userSelect-color-detailText{
+  border-radius: 15px;
+  padding: 10px 20px;
+  background-color: #cfcece;
+  font-weight: 500;
 }
 
 

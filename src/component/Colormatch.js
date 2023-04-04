@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import Colors from "./Colors";
 import ShoppingMall from "./ShoppingMall";
 import { useState } from "react";
+import Carousel from "react-multi-carousel";
 
 const choice = {
   BLACK: {
@@ -129,6 +130,7 @@ const choice = {
 
 const Colormatch = () => {
   const [userSelect, setUserSelect] = useState(choice[0]);
+  const [selectColor, setSelectColor] = useState(false);
 
   const color = [
     "BLACK",
@@ -145,10 +147,129 @@ const Colormatch = () => {
 
   const colorPoint = (userChoice) => {
     setUserSelect(choice[userChoice.item]);
+    setSelectColor(true);
+  };
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 4.5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3.7,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
   };
 
   return (
     <>
+      <div className="recommend-video-area">
+        <Container className="recommend-color-video">
+          <div>
+            <span className="logo">Stylist</span>
+            <span className="video-text">가 준비한 컬러매치 영상</span>
+          </div>
+          <Carousel responsive={responsive} className="video-content">
+            <div>
+              <iframe
+                width="320"
+                height="181"
+                src="https://www.youtube.com/embed/GCcqsNWU_LE"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                width="320"
+                height="181"
+                src="https://www.youtube.com/embed/C_y3QKHqhF4"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                width="320"
+                height="181"
+                src="https://www.youtube.com/embed/7kKWhKvXxxc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                width="320"
+                height="181"
+                src="https://www.youtube.com/embed/vWjUWRe219Q"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                width="320"
+                height="181"
+                src="https://www.youtube.com/embed/b1iCLXDFhgc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                width="320"
+                height="181"
+                src="https://www.youtube.com/embed/maf2-AwvUkY"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                width="320"
+                height="181"
+                src="https://www.youtube.com/embed/MvsrlCFJJNE"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                width="320"
+                height="181"
+                src="https://www.youtube.com/embed/O_IUHkcG3eo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </Carousel>
+        </Container>
+      </div>
       <div className="colormatch">
         <Container>
           <div className="colormatch-text">
@@ -177,7 +298,7 @@ const Colormatch = () => {
             ))}
           </div>
 
-          <Colors userSelect={userSelect} />
+          <Colors userSelect={userSelect} selectColor={selectColor} />
         </Container>
       </div>
       <Container>

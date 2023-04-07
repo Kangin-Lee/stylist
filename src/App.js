@@ -16,6 +16,7 @@ import Footer from "./component/Footer";
 
 function App() {
   const [weather, setWeather] = useState(null);
+  const [airPollution, setAirPollution] = useState(null);
 
   //위치 가져오기
   const getCurrentLocation = () => {
@@ -23,19 +24,29 @@ function App() {
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
       getWeatherByCurrentLocation(lat, lon);
+      getAirPollutionByCurrentLocation(lat, lon);
     });
   };
 
   const getWeatherByCurrentLocation = async (lat, lon) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=07c8f80150954d942a79882827366bc7&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=kr&appid=07c8f80150954d942a79882827366bc7&units=metric`;
     let response = await fetch(url);
     let data = await response.json();
-    console.log(data);
     setWeather(data);
+  };
+
+  const getAirPollutionByCurrentLocation = async (lat, lon) => {
+    let url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&lang=kr&appid=07c8f80150954d942a79882827366bc7&units=metric`;
+    let response = await fetch(url);
+    let data = await response.json();
+    setAirPollution(data);
   };
 
   useEffect(() => {
     getCurrentLocation();
+    if (airPollution) {
+      getAirPollutionByCurrentLocation();
+    }
   }, []);
 
   return (
@@ -46,7 +57,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/ootd" element={<Ootd />} />
         <Route path="/tpo" element={<Tpo />} />
-        <Route path="/outfit" element={<Outfit />} />
+        <Route
+          path="/outfit"
+          element={<Outfit weather={weather} airPollution={airPollution} />}
+        />
         <Route path="/weather" element={<Weather />} />
         <Route path="/colormatch" element={<Colormatch />} />
         <Route path="/washing" element={<Washing />} />

@@ -92,6 +92,18 @@ body{
   margin: 55px 0 30px 0;
 }
 
+.menu-detail:after {
+  display:block;
+  content: '';
+  border-bottom: solid 4px black;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-detail:hover:after { 
+  transform: scaleX(1); 
+}
+
 .menu li{
   list-style: none;
   font-size: 21px;
@@ -102,13 +114,6 @@ body{
   text-decoration: none;
   color: black;
   padding-bottom: 5px;
-}
-
-.menu-detail:hover{
-  border-bottom: 4px solid black;
-  color: black;
-  border-radius: 3px;
-  transition: 0.13s;
 }
 
 /* home------------------------------------------------------------------------------------ */
@@ -631,7 +636,102 @@ body{
   font-weight: 500;
 }
 
+/* outfit============================================================= */
+.outfit-area{
+  background-color:rgba(240, 238, 238, 0.507);
+  padding: 30px 0;
+}
 
+.current-weather{
+
+ display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  padding: 15px 0;
+}
+
+.weather-img{
+  background-color: lightgray;
+  border-radius: 100%;
+  margin-bottom: 15px;
+}
+
+.current-temp{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.current-temp div{
+  width: 100%;
+  text-align: center;
+  padding: 5px 30px;
+  background-color: lightgray;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.air-pollution{
+  display: flex;
+  justify-content: space-between;
+
+}
+.pm{
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.text{
+  text-align: center;
+}
+
+.pm-common-text{
+  font-weight: bold;
+  color: white;
+  padding: 0 10px;
+  border-radius: 15px;
+  margin-bottom: 3px;
+}
+
+.air-status{
+  margin-left: 5px;
+}
+
+.clock{
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  font-size: 1.5em;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-weight: bold;
+  background-color: lightgray;
+}
+
+.clock button{
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+}
+
+.feels-like{
+  background-color: lightgray;
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px 0;
+  margin: 14px 0;
+  font-weight: bold;
+}
 
 /* footer-------------------------------------------------------- */
 .footer{

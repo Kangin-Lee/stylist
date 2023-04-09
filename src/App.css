@@ -270,10 +270,11 @@ body{
 .trend-second-text{
   margin-top: 10px;
   font-weight: bold;
-  width: 570px;
+  width: 620px;
   padding: 10px 20px; 
   border-radius: 20px;
   background-color: #cfcece;
+  font-size: 1.1em;
 }
 .trend-img{
   border-radius: 15px;
@@ -293,6 +294,11 @@ body{
   width: 100%;
   border-right: 5px solid rgba(0, 0, 0, 0.301);
   margin: 0 30px;
+}
+
+.trend-card-text p, .trend-card-text-2 p{
+  font-size: 1.1em;
+  line-height: 2em;
 }
 
 .cargo{
@@ -418,8 +424,9 @@ body{
   
 }
 
-.colormatch-text p:nth-child(1){
-  font-weight: bold;
+.colormatch-explain{
+  font-size: 1.1em;
+  font-family: sans-serif;
 }
 
 .colormatch-text p:last-child{
@@ -643,36 +650,67 @@ body{
 }
 
 .current-weather{
-
  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 400px;
-  background-color: white;
+  background-color: #f1f5fe;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
   padding: 15px 0;
 }
 
+.weather-supply{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 10px;
+  font-weight: bold;
+
+}
+
+.weather-supply p{
+  margin: 0 0 0 5px;
+}
+
 .weather-img{
-  background-color: lightgray;
-  border-radius: 100%;
+  width: 350px;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
   margin-bottom: 15px;
+  font-size: 4.5em;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.weather-img div:last-child{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-location{
+  color:#eb6d4a;
 }
 
 .current-temp{
+  width: 350px;
   display: flex;
   justify-content: space-between;
-
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .current-temp div{
   width: 100%;
   text-align: center;
-  padding: 5px 30px;
-  background-color: lightgray;
-  border-radius: 15px;
   font-weight: bold;
 }
 
@@ -682,7 +720,7 @@ body{
 
 }
 .pm{
-  width: 120px;
+  width: 168px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -715,7 +753,8 @@ body{
   border-radius: 15px;
   padding: 5px 10px;
   font-weight: bold;
-  background-color: lightgray;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .clock button{
@@ -725,12 +764,81 @@ body{
 }
 
 .feels-like{
-  background-color: lightgray;
-  text-align: center;
-  border-radius: 15px;
-  padding: 5px 0;
-  margin: 14px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
+  margin-top: 10px;
+}
+
+.feels-like p{
+  margin: 0px 10px;
+}
+
+/* image------------------------------------------------------------ */
+.img-area{
+  display: inline-block;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+}
+
+.img-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+
+.img-header div:first-child{
+  display: flex;
+  align-items: center;
+}
+
+.three-dot{
+  margin: 0 15px;
+}
+
+.circle-logo{
+  border-radius: 100%;
+  padding: 12px 10px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  margin: 0 7px 0 10px;
+  font-size: 0.7em;
+}
+
+.img-btns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+.img-icon {
+  padding: 10px 5px;
+}
+
+.img-btns div:first-child .img-icon:first-child{
+  color: rgb(241, 3, 3);
+  padding: 10px;
+}
+
+.img-btns div:last-child .img-icon{
+  padding: 10px;
+}
+
+.img-hashtag div{
+  display: inline-block;
+  color: rgb(226, 225, 225);
+  border-radius: 30px;
+  background-color: rgb(20, 20, 20);
+  padding: 5px 10px;
+  margin: 0 5px 10px 5px;
+  font-weight: bold;
+  font-size: 0.9em;
 }
 
 /* footer-------------------------------------------------------- */

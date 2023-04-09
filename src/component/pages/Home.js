@@ -1,20 +1,28 @@
-import React, { useState } from 'react'
-import Carousel from 'react-bootstrap/Carousel';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleRight,
   faFire,
   faQuoteLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import Video from "./Video";
+import Video from "../Video";
 import { Container, Card } from "react-bootstrap";
-import ShoppingMall from "./ShoppingMall";
+import ShoppingMall from "../ShoppingMall";
+import Image from "../Image";
 
 const Home = () => {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
+  };
+
+  const trend = {
+    cargo: ["카고", "Cargo", "Y2K", "2023 S/S", "카고팬츠"],
+    denim: ["데님", "Y2K", "Denim", "청춘", "2023 S/S"],
+    leather: ["레더", "가죽", "Leather", "포인트", "가죽자켓", "비건레더"],
+    magenta: ["비바마젠타", "올해의컬러", "PANTONE", "VivaMagenta"],
   };
 
   const navigate = useNavigate();
@@ -87,10 +95,7 @@ const Home = () => {
             <span className="trend-title">
               2023년! S/S시즌 <br /> Fashion
             </span>
-            <span className="trend-hot">
-              HOT
-              <FontAwesomeIcon icon={faFire} />
-            </span>
+            <span className="trend-hot">HOT🔥</span>
             <span className="trend-title">Trend</span>
           </div>
           <div className="trend-second-text">
@@ -106,7 +111,7 @@ const Home = () => {
 
           <div className="trend-card-1">
             <div className="trend-card-text">
-              <h3 className="cargo">카고 (Cargo)</h3>
+              <h3 className="cargo">#카고 (Cargo)</h3>
               <p>
                 지난해에 이어 올해도 카고팬츠의 인기는 이어질 것으로 보입니다.
               </p>
@@ -128,21 +133,13 @@ const Home = () => {
                 유행에 불을 지피고 있습니다.
               </p>
             </div>
-            <img
-              className="trend-img"
-              width={300}
-              src="/images/trend/cargo.png"
-            />
+            <Image src={"/images/trend/cargo.png"} trend={trend.cargo} />
           </div>
 
           <div className="trend-card-2">
-            <img
-              className="trend-img"
-              width={300}
-              src="/images/trend/denim.jpg"
-            />
+            <Image src={"/images/trend/denim.jpg"} trend={trend.denim} />
             <div className="trend-card-text-2">
-              <h3 className="Denim">데님(Denim)</h3>
+              <h3 className="Denim">#데님(Denim)</h3>
               <p>Y2K하면 빠질 수 없는 것이 데님이죠.</p>
               <p>
                 데님은 자신의 개성을 잘 표현할 수 있는 소재로 청춘, 자유로움의
@@ -161,7 +158,7 @@ const Home = () => {
 
           <div className="trend-card-1">
             <div className="trend-card-text">
-              <h3>레더(Leather)</h3>
+              <h3>#레더(Leather)</h3>
               <p>올해 가장 돋보이는 소재는 가죽입니다.</p>
               <p>
                 레더는 매 시즌마다 아우터, 팬츠, 스커트, 드레스 등 다양한
@@ -180,21 +177,13 @@ const Home = () => {
               <p>스쿼트, 팬츠 등 다양한 옷들에 가죽을 사용했으며</p>
               <p>여러 형태의 가죽 셋업도 소개되었습니다.</p>
             </div>
-            <img
-              className="trend-img"
-              width={300}
-              src="/images/trend/leather.jpg"
-            />
+            <Image src={"/images/trend/leather.jpg"} trend={trend.leather} />
           </div>
 
           <div className="trend-card-2">
-            <img
-              className="trend-img"
-              width={300}
-              src="/images/trend/magenta.jpg"
-            />
+            <Image src={"/images/trend/magenta.jpg"} trend={trend.magenta} />
             <div className="trend-card-text-2">
-              <h3 className="magenta">비바 마젠타(Viva Magenta)</h3>
+              <h3 className="magenta">#비바 마젠타(Viva Magenta)</h3>
               <p>
                 미국 색채 연구소 PANTONE은 올해의 컬러로 레드 계열의 ‘비바
                 마젠타’를 선정했습니다.
@@ -223,11 +212,10 @@ const Home = () => {
           </div>
         </Container>
       </div>
-
       {/* 쇼핑몰 바로가기 */}
       <ShoppingMall />
     </div>
   );
 };
 
-export default Home
+export default Home;

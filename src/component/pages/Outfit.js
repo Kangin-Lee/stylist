@@ -9,12 +9,13 @@ import {
   faFaceAngry,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
+import WeatherCloth from "../WeatherCloth";
 
 const Outfit = ({ weather, airPollution }) => {
   let weatherIcon = `/images/icons/${weather?.weather[0].icon}.png`;
+  console.log(weather);
+  let date = new Date();
 
-  const date = new Date();
-  console.log(date);
   const [time, setTime] = useState(date);
   const timeReturn = () => {
     setTime(date);
@@ -214,21 +215,36 @@ const Outfit = ({ weather, airPollution }) => {
         <div>
           <div className="current-weather">
             <div className="weather-img">
-              <img width={200} src={weatherIcon} />
+              <div className="weather-supply">
+                <img
+                  width={100}
+                  src="https://brands.home-assistant.io/_/openweathermap/logo.png"
+                />{" "}
+                <p>제공</p>
+              </div>
+              <div>
+                <img width={140} src={weatherIcon} />
+                <strong>{weather?.main.temp.toFixed(1)}°</strong>
+              </div>
             </div>
 
             <div>
               <div className="current-temp">
                 <div>
-                  <FontAwesomeIcon icon={faLocationDot} /> {weather?.name} /{" "}
-                  {weather?.main.temp.toFixed()}℃
+                  <FontAwesomeIcon
+                    icon={faLocationDot}
+                    className="current-location"
+                  />{" "}
+                  {weather?.name} / {weather?.weather[0].description} /
+                  체감온도: {weather?.main.feels_like.toFixed()}℃
+                  <div className="feels-like">
+                    <p>습도: {weather?.main.humidity}%</p>◾
+                    <p>풍속: {weather?.wind.speed}m/s</p>
+                  </div>
                 </div>
               </div>
 
               <div>
-                <div className="feels-like">
-                  체감온도: {weather?.main.feels_like.toFixed()}℃
-                </div>
                 <div className="air-pollution">
                   {pm10()}
                   {pm2_5()}
@@ -251,6 +267,9 @@ const Outfit = ({ weather, airPollution }) => {
         </div>
         {/* 옷차림 추천 ======================================================*/}
         Outer Top Bottom 슈즈 순
+        <div>
+          <WeatherCloth weather={weather} />
+        </div>
       </Container>
     </div>
   );

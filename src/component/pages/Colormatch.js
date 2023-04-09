@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import { Container } from "react-bootstrap";
-import Colors from "./Colors";
-import ShoppingMall from "./ShoppingMall";
+import Colors from "../Colors";
+import ShoppingMall from "../ShoppingMall";
 import { useState } from "react";
 import Carousel from "react-multi-carousel";
 
@@ -274,7 +274,7 @@ const Colormatch = () => {
         <Container>
           <div className="colormatch-text">
             <h3>Color Match | 컬러 매치</h3>
-            <p>
+            <p className="colormatch-explain">
               아직도 컬러 매치가 어려우신가요? <br /> 지금 바로 팔레트에서
               원하는 색상을 선택해 보세요! <br /> 스타일리스트가 그 색과
               어울리는 색을 추천해드립니다.
@@ -308,4 +308,4 @@ const Colormatch = () => {
   );
 };
 
-export default Colormatch
+export default Colormatch;

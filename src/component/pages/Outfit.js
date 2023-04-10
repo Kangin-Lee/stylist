@@ -224,19 +224,23 @@ const Outfit = ({ weather, airPollution }) => {
               </div>
               <div>
                 <img width={140} src={weatherIcon} />
-                <strong>{weather?.main.temp.toFixed(1)}°</strong>
+                <div className="weather-location">
+                  <strong>{weather?.main.temp.toFixed(1)}°</strong>
+                  <div className="current-location">
+                    <div>
+                      <FontAwesomeIcon icon={faLocationDot} />
+                    </div>
+                    <div>{weather?.name}</div>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div>
               <div className="current-temp">
                 <div>
-                  <FontAwesomeIcon
-                    icon={faLocationDot}
-                    className="current-location"
-                  />{" "}
-                  {weather?.name} / {weather?.weather[0].description} /
-                  체감온도: {weather?.main.feels_like.toFixed()}℃
+                  {weather?.weather[0].description} / 체감온도:{" "}
+                  {weather?.main.feels_like.toFixed()}℃
                   <div className="feels-like">
                     <p>습도: {weather?.main.humidity}%</p>◾
                     <p>풍속: {weather?.wind.speed}m/s</p>

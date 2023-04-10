@@ -656,7 +656,7 @@ body{
   align-items: center;
   width: 400px;
   background-color: #f1f5fe;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 15px;
   padding: 15px 0;
 }
@@ -680,21 +680,33 @@ body{
   padding: 10px;
   display: flex;
   flex-direction: column;
-
   margin-bottom: 15px;
   font-size: 4.5em;
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .weather-img div:last-child{
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
+}
+
+.weather-location{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .current-location{
   color:#eb6d4a;
+  font-size: 16px;
+}
+
+.current-location div:last-child{
+  margin-left: 3px;
+  color:black;
 }
 
 .current-temp{
@@ -702,7 +714,7 @@ body{
   display: flex;
   justify-content: space-between;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 15px;
   padding: 10px;
   margin-bottom: 15px;
@@ -754,7 +766,7 @@ body{
   padding: 5px 10px;
   font-weight: bold;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .clock button{

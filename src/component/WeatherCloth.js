@@ -1,36 +1,38 @@
 import React from "react";
 
+const wear = {
+  outer: {
+    four: [
+      "https://image.msscdn.net/images/goods_img/20221004/2835863/2835863_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20211117/2238440/2238440_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20221012/2854367/2854367_4_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20221007/2848683/2848683_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20200804/1536412/1536412_1_500.jpg",
+    ],
+    8: [
+      "https://image.msscdn.net/images/goods_img/20210825/2086731/2086731_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20220831/2757395/2757395_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20221116/2946443/2946443_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20220307/2403203/2403203_3_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20220224/2383079/2383079_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20190129/942911/942911_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20200205/1291016/1291016_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20220818/2724701/2724701_3_500.jpg",
+    ],
+    11: [
+      "https://image.msscdn.net/images/goods_img/20210210/1790383/1790383_2_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20230130/3046690/3046690_16759242185174_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20200915/1604644/1604644_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20220224/2383079/2383079_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20190129/942911/942911_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20200205/1291016/1291016_1_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20220818/2724701/2724701_3_500.jpg",
+      "https://image.msscdn.net/images/goods_img/20220307/2403203/2403203_3_500.jpg",
+    ],
+  },
+};
+
 const cloth = [
-  {
-    name: "롱패딩",
-    img: "https://image.msscdn.net/images/goods_img/20221004/2835863/2835863_1_500.jpg",
-    category: "OUTER",
-    weather: 4,
-  },
-  {
-    name: "숏패딩",
-    img: "https://image.msscdn.net/images/goods_img/20210930/2156412/2156412_2_500.jpg",
-    category: "OUTER",
-    weather: 4,
-  },
-  {
-    name: "더플코트",
-    img: "https://image.msscdn.net/images/goods_img/20211117/2238440/2238440_1_500.jpg",
-    category: "OUTER",
-    weather: 4,
-  },
-  {
-    name: "발마칸코트",
-    img: "https://image.msscdn.net/images/goods_img/20221012/2854367/2854367_4_500.jpg",
-    category: "OUTER",
-    weather: 4,
-  },
-  {
-    name: "싱글코트",
-    img: "https://image.msscdn.net/images/goods_img/20221007/2848683/2848683_1_500.jpg",
-    category: "OUTER",
-    weather: 4,
-  },
   {
     name: "코듀로이 팬츠",
     img: "https://image.msscdn.net/images/goods_img/20220916/2799977/2799977_1_500.jpg",
@@ -49,12 +51,7 @@ const cloth = [
     category: "PANTS",
     weather: 4,
   },
-  {
-    name: "더블코트",
-    img: "https://image.msscdn.net/images/goods_img/20200804/1536412/1536412_1_500.jpg",
-    category: "OUTER",
-    weather: 4,
-  },
+
   {
     name: "가죽자켓",
     img: "https://image.msscdn.net/images/goods_img/20210825/2086731/2086731_1_500.jpg",
@@ -148,25 +145,31 @@ const cloth = [
 ];
 
 const WeatherCloth = ({ weather }) => {
-  cloth.map((item) =>
-    weather?.main.temp.toFixed() > 11 && weather?.main.temp.toFixed() < 20
-      ? item.weather > 11 && item.weather < 20
-        ? console.log(item.weather)
-        : ""
-      : ""
-  );
+  const filteredCloth = wear.outer.four;
 
+  console.log(filteredCloth);
   return (
     <div>
       <div>현재 기온: {weather?.main.temp.toFixed()}℃</div>
+
+      {/* 아우터 */}
       <div>
-        {cloth.map((item) => (
-          <div>
-            <img width={200} src={item.img} />
-            <div>{item.name}</div>
-          </div>
+        <h3>OUTER</h3>
+        {filteredCloth.map((item) => (
+          <img width={200} src={item} />
         ))}
       </div>
+
+      {/* 상의 */}
+      <div>
+        <h3>TOP</h3>
+        {/* {filteredCloth.map((item) => (
+          <img src={item.category == "TOP" && item.img} />
+        ))} */}
+      </div>
+
+      {/* 하의 */}
+      <div></div>
     </div>
   );
 };
